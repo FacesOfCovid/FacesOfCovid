@@ -12,6 +12,7 @@ function App() {
     <Router>
 
       <div>
+        {/* Public Routes */}
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
       </div>
