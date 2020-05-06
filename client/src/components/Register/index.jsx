@@ -11,7 +11,7 @@ const Register = (props) => {
     const [user, setUser] = useState({ username: "", password: "", password2: "" });
 
 
-    //sets user name, password and password2  
+    //sets user name, password and password2   
     const onChange = e => {
         setUser({ ...user, [e.target.name]: e.target.value });
         console.log(user)
@@ -25,7 +25,9 @@ const Register = (props) => {
         e.preventDefault();
         //verify password inputs match 
         if (user.password2 === user.password) {
+            //============================================================
             //=============add code here to register user=================
+            //============================================================
             resetForm();
             props.history.push('./login');
         } else {
@@ -37,19 +39,13 @@ const Register = (props) => {
 
 
     return (
-        <div>
-            {/* logo row */}
-            <div className="row mb-5">
-                <div className="col-sm-6 offset-3">
-                    <TitleLogo />
-                </div>
-            </div>
+        <div className="container registerWrapper">
 
             {/* form row */}
             <div className="row">
                 <div className="col-sm-8 offset-2">
 
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} className="registerForm">
 
                         <h3 className="mb-3">Register</h3>
 

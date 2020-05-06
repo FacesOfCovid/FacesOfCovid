@@ -32,5 +32,8 @@ h3 {
         background: #D3AD6E;
         border: 1px solid #FFFFFF;
         border-radius: 20px;
-    
     }
+
+    .registerForm {
+        margin-top: 100px;
+     }

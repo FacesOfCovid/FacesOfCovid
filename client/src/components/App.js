@@ -13,15 +13,19 @@ function App() {
   return (
     <Router>
 
-      <div>
-        <Navbar />
+      <Navbar />
+
+      <div className="container-fluid">
+
         {/* Public Routes */}
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-        <Footer />
 
       </div>
-    </Router>
+
+      <Footer />
+
+    </Router >
 
 
 

@@ -4,13 +4,14 @@ nav {
     height: 7.5rem;
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 1;
 }
 
 nav .project-name {
     font-size: 2rem;
     line-height: 7.5rem;
     padding-left: 2rem;
+    padding-bottom: 4rem;
     display: block;
     float: left;
 }

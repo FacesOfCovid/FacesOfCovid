@@ -25,20 +25,14 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className="container loginWrapper">
 
-            {/* logo row */}
-            <div className="row mb-5">
-                <div className="col-sm-6 offset-3">
-                    <TitleLogo />
-                </div>
-            </div>
 
             {/* form row */}
             <div className="row">
                 <div className="col-sm-8 offset-2">
 
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={onSubmit} className="loginForm">
                         <h3 className="mb-3">Log In</h3>
 
                         <div className="row mb-2">
