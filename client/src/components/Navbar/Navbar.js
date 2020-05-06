@@ -5,7 +5,10 @@ import "./navbar.css";
 const Navbar = () => {
     return (
         <nav className="nav">
-            <a href="/" className="logo">Faces of Covid</a>
+            <a href="/" className="project-name">
+                {/* <img className="logo" src="#" alt="Logo" /> */}
+                Faces of Covid
+            </a>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" for="menu-btn">
                 <span className="nav-icon"></span>
