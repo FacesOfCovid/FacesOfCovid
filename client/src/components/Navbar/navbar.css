@@ -1,0 +1,96 @@
+nav {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Manrope", "Montserrat", "Helvetica", "Arial", sans-serif;
+    height: 7.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+nav .project-name {
+    font-size: 2rem;
+    line-height: 7.5rem;
+    padding-left: 2rem;
+    display: block;
+    float: left;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav ul a {
+    display: block;
+    padding: 2rem;
+}
+
+nav ul a:hover {
+    color: #D3AD6E;
+}
+
+nav .menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+
+    clear: both;
+}
+
+nav .menu-icon {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    padding: 3.3rem 2rem;
+}
+
+nav .menu-icon .nav-icon {
+    background: #D3AD6E;
+    display: block;
+    height: 0.2rem;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 1.8rem;
+}
+
+nav .menu-icon .nav-icon:before {
+    background: #D3AD6E;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+        top: 5px;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+nav .menu-icon .nav-icon:after {
+    background: #D3AD6E;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+        top: -5px;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+nav .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+    max-height: 24rem;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon {
+    background-color: transparent;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
