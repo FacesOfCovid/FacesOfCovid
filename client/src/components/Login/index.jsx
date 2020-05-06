@@ -27,7 +27,6 @@ const Login = () => {
     return (
         <div className="container loginWrapper">
 
-
             {/* form row */}
             <div className="row">
                 <div className="col-sm-8 offset-2">
