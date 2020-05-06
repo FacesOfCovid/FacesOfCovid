@@ -8,10 +8,11 @@ html {
 }
   
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	margin: 0;
-	padding: 0;
+	color: #161310;
 	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 	font-weight: normal;
+	margin: 0;
+	padding: 0;
 }
   
 ol, ul {
@@ -21,4 +22,15 @@ ol, ul {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+a {
+	color: #161310;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: none;
 }
