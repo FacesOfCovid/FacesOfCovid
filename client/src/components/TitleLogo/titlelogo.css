@@ -1,0 +1,26 @@
+.titleLogoWrapper {
+    padding: 5px;
+}
+
+.logo {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: rgba(253, 218, 157, 0.4);
+display: inline-block;
+}
+
+.title {
+width: 141px;
+height: 25px;
+left: 117px;
+bottom: 677px;
+font-family: Merriweather;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+
+color: #161310;
+}
+
