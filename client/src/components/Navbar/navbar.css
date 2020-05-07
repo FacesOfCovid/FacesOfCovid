@@ -9,11 +9,12 @@ nav {
 
 nav .project-name {
     font-size: 2rem;
-    line-height: 7.5rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
     display: block;
-    float: left;
+    padding: 0;
+
+    position: absolute;
+        top: 2.25rem;
+        left: 3rem;
 }
 
 nav ul {
@@ -38,9 +39,10 @@ nav .menu {
 
 nav .menu-icon {
     cursor: pointer;
-    position: relative;
-    float: right;
-    padding: 3.3rem 2rem;
+    position: absolute;
+        top: 3.5rem;
+        right: 3rem;
+    z-index: 5;
 }
 
 nav .menu-icon .nav-icon {
