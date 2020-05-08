@@ -2,15 +2,15 @@ const express = require('express');
 const app = express()
 const path = require('path');
 const PORT= process.env.PORT || 5150;
-// const connectDB = require('./config/db);
+const connectDB = require('./config/db');
 // Connect database
-// connectDB();
+connectDB();
 
 // express middleware
 app.use(express.json({ extended: false }));
 
 // define routes
-// app.use('/api/users', require('./routes/api/users'));
+app.use('/api/users', require('./routes/api/users'));
 // app.use('/api/auth', require('./routes/api/auth'));
 // app.use('/api/profile', require('./routes/api/profile'));
 // app.use('/api/posts', require('./routes/api/posts'));
