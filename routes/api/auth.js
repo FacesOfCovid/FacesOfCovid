@@ -61,7 +61,7 @@ routR.post('/', [
             }
         };
         jwt.sign(payload,
-            cFig.get('scrtSTR'),
+            cFig.get('ss'),
             { expiresIn: 33250 },
             (err, tk) => {
                 if (err) throw err;
