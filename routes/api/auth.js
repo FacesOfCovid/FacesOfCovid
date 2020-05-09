@@ -19,7 +19,7 @@ routR.get('/', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-pwd');
         res.json(user);
-        console.log(user)
+        // console.log(user)
         // console.log('get auth user method')
     } catch (err) {
         console.error(err.message);

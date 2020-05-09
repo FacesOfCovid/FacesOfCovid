@@ -9,7 +9,7 @@ module.exports = function(req, res, next) {
     }
     // verify tk
     try {
-      const dCoded = jwt.verify(tk, cFig.get('scrtSTR'));
+      const dCoded = jwt.verify(tk, cFig.get('ss'));
       req.user = dCoded.user;
       next();  
     } catch (err) {
