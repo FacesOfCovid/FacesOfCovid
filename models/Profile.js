@@ -11,7 +11,7 @@ const ProfileSchema = new Schema({
     },
     location: { type: String },
     bio: { type: String },
-    // bestQualities can be changed to handle photos
+    // bestQualities can be changed to usePhotos
     // we must come to a consesus of where we would like 
     // to place xyz data so that it makes it that much easier when 
     // connecting the client and server. As it holds an array of string-type

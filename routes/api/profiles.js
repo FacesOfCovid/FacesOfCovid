@@ -168,7 +168,7 @@ routR.delete('/', auth, async (req, res) => {
  * @access  Private
  */
 routR.put('/loved-ones', [auth, [
-    check('title', "Title is required!")
+    check('name', "Title is required!")
         .not()
         .isEmpty(),
     check('avi', "We need a photo to identify whom this person is! Please upload a photo.")
@@ -188,7 +188,8 @@ routR.put('/loved-ones', [auth, [
     }
     // destructure the request body
     const {
-        title,
+        name,
+        avi,
         dateStart,
         dateEnd,
         recovered,
@@ -196,7 +197,8 @@ routR.put('/loved-ones', [auth, [
     } = req.body;
     // make a new experience_obj
     const newLovedOne = {
-        title,
+        name,
+        avi,
         dateStart,
         dateEnd,
         recovered,
