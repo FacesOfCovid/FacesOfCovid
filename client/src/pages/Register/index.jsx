@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import './register.css';
 
 //COMPONENTS
-import TitleLogo from '../TitleLogo';
+import TitleLogo from '../../components/TitleLogo';
 
 const Register = (props) => {
     const [user, setUser] = useState({ username: "", password: "", password2: "" });
