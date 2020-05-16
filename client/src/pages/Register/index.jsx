@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
+//COMPONENTS
+import PageHeader from '../../components/PageHeader';
+import SubmitButton from '../../components/SubmitButton';
 
 //STYLESHEET
 import './register.css';
@@ -37,50 +41,50 @@ const Register = (props) => {
 
     }
 
-
     return (
-        <div className="container registerWrapper">
-
-            {/* form row */}
-            <div className="row">
-                <div className="col-sm-8 offset-2">
-
-                    <form onSubmit={onSubmit} className="registerForm">
-
-                        <h3 className="mb-3">Register</h3>
-
-                        <div className="row mb-2">
-                            <label htmlFor="username">E-mail</label>
-                            <input type="text"
-                                name="username"
-                                onChange={onChange}
-                                placeholder="example@email.com" />
-                        </div>
-
-                        <div className="row mb-2">
-                            <label htmlFor="password">Password</label>
-                            <input type="password"
-                                name="password"
-                                onChange={onChange} />
-                        </div>
-
-
-
-                        <div className="row mb-2">
-                            <label htmlFor="password2">Confirm Password</label>
-                            <input type="password"
-                                name="password2"
-                                onChange={onChange} />
-                        </div>
-
-                        <button className="registerButton" type="submit">Register</button>
-
-                    </form>
+        <div>
+            <PageHeader title="Register"></PageHeader>
+            <form onSubmit={onSubmit}>
+                <div className="form-section">
+                    <label htmlFor="name">Name</label>
+                    <input 
+                        type="text"
+                        name="name"
+                        onChange={onChange}
+                        placeholder="Your Name" />
+                    <div className="validation-message"></div>
                 </div>
-            </div>
+                <div className="form-section">
+                    <label htmlFor="username">E-Mail</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        onChange={onChange}
+                        placeholder="example@email.com" />
+                    <div className="validation-message"></div>
+                </div>
+                <div className="form-section">
+                    <label htmlFor="password">Password</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        onChange={onChange} />
+                    <div className="validation-message"></div>
+                </div>
+                <div className="form-section">
+                    <label htmlFor="password2">Confirm Password</label>
+                    <input 
+                        type="password"
+                        name="password2"
+                        onChange={onChange} />
+                </div>
+                <SubmitButton label="Register"></SubmitButton>
+                <div className="forgot-pw">
+                    <p>Don't have an account? <Link className="redirect" to="/Register">Log In</Link></p>
+                </div>
+            </form>
+        </div>
+    );
+};
 
-        </div >
-    )
-}
-
-export default Register
+export default Register;

@@ -29,7 +29,7 @@ const Login = () => {
             <PageHeader title="Log In"></PageHeader>
             <form onSubmit={onSubmit} className="loginForm">
                 <div className="form-section">
-                    <label htmlFor="username">E-mail</label>
+                    <label htmlFor="username">E-Mail</label>
                     <input 
                         type="text"
                         name="username"
