@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 //COMPONENTS
-import TitleLogo from '../TitleLogo';
+import PageHeader from '../PageHeader';
+import SubmitButton from '../SubmitButton';
 
 // STYLESHEETS
 import './login.css';
@@ -23,38 +24,34 @@ const Login = () => {
         //==================add code to verify here================
     }
 
-
     return (
-        <div className="container loginWrapper">
-
-            {/* form row */}
-            <div className="row">
-                <div className="col-sm-8 offset-2">
-
-                    <form onSubmit={onSubmit} className="loginForm">
-                        <h3 className="mb-3">Log In</h3>
-
-                        <div className="row mb-2">
-                            <label htmlFor="username">E-mail</label>
-                            <input type="text"
-                                name="username"
-                                onChange={onChange}
-                                placeholder="example@email.com" />
-                        </div>
-                        <div className="row mb-2">
-                            <label htmlFor="password">Password</label>
-                            <input type="password"
-                                name="password"
-                                onChange={onChange} />
-                        </div>
-                        <button className="loginButton" type="submit">Log in</button>
-                        <p>Forgot Password?</p>
-                        <p>Don't have an account? <Link to="/Register">Register</Link></p>
-                    </form>
+        <div>
+            <PageHeader title="Log In"></PageHeader>
+            <form onSubmit={onSubmit} className="loginForm">
+                <div className="form-section">
+                    <label htmlFor="username">E-mail</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        onChange={onChange}
+                        placeholder="example@email.com" />
+                    <div className="validation-message"></div>
                 </div>
-            </div>
-
-        </div >
+                <div className="form-section">
+                    <label htmlFor="password">Password</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        onChange={onChange} />
+                    <div className="validation-message"></div>
+                </div>
+                <SubmitButton label="Log In"></SubmitButton>
+                <div className="forgot-pw">
+                    <p>Forgot Password?</p>
+                    <p>Don't have an account? <Link className="redirect" to="/Register">Register</Link></p>
+                </div>
+            </form>
+        </div>
     )
 }
 
