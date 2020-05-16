@@ -15,7 +15,7 @@ const Entry = () => {
             <input id="last-name" type="text" placeholder="Washington" required></input>
           </div>
           <div className="form-group">
-            <h5>Birthplace:</h5>
+            <h5 className="heading">Birthplace:</h5>
 
             <label for="city">City:</label>
             <input id="city" type="text" placeholder="Anywhere" required></input>
@@ -76,7 +76,7 @@ const Entry = () => {
 
           </div>
           <div className="form-group">
-            <h5>Date of Birth:</h5>
+            <h5 className="heading">Date of Birth:</h5>
             <label for="month">Month:</label>
             <select id="month">
               <option value="January">January</option>
@@ -248,7 +248,11 @@ const Entry = () => {
             </select>
 
           </div>
-
+          <div class="form-group">
+            <label for="photo">Upload A Photo:</label>
+            <input type="file" class="form-control-file" id="photo">
+            </input>
+          </div>
         </form >
       </div >
     </div>
