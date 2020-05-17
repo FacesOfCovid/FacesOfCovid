@@ -10,7 +10,7 @@ const Footer = () => {
         <footer>
             <p>
                 © {currentYear}
-                <a href="https://github.com/FacesOfCovid/FacesOfCovid"> Faces of Covid</a>
+                <a href='https://github.com/FacesOfCovid/FacesOfCovid'> Faces of Covid</a>
             </p>
         </footer>
     );

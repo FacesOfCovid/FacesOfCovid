@@ -4,11 +4,11 @@ import { Route, Switch } from 'react-router-dom';
 //COMPONENTS
 import Login from '../../pages/Login';
 import Register from '../../pages/Register';
+import About from '../../pages/About';
+import Memorial from '../../pages/Entry'
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
 // import Profile from '../Profile';
-// import AboutUs from '../AboutUs';
-// import Memorial from '../Memorial';
 // import NoMatch from '../404';
 
 // STYLESHEETS
@@ -25,8 +25,8 @@ const Wrapper = () => {
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
                 {/* <Route path="/profile" component={Profile}/> */}
-                {/* <Route path="/about-us" component={AboutUs}/> */}
-                {/* <Route path="/memorial/:id" component={Memorial}/> */}
+                <Route path="/about" component={About}/>
+                <Route path="/memorial/:id" component={Memorial}/>
                 {/* <Route component={NoMatch}/> */}
 
             </Switch>
