@@ -1,0 +1,54 @@
+form {
+    width: 26rem;
+}
+ 
+.form-section {
+    height: 10rem;
+}
+ 
+label {
+    display: block;
+    font-size: 2rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 100%;
+}
+ 
+input {
+    border: none;
+    border-bottom: 1px solid #D3AD6E;
+    margin-top: 1rem;
+    width: 100%;
+}
+ 
+.validation-message {
+    font-size: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.5rem;
+}
+ 
+.error {
+    color: #E11D1D;
+}
+ 
+.success {
+    color: #6CBE19;
+}
+ 
+.forgot-pw {
+    text-align: center;
+}
+ 
+.forgot-pw p {
+    color: #4B4B4B;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+ 
+.redirect {
+    color: #D3AD6E;
+}
+.redirect:hover {
+    color: #D3AD6E;
+    font-weight: 600;
+}
