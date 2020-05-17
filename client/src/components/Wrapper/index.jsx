@@ -2,11 +2,11 @@ import React from "react";
 import { Route, Switch } from 'react-router-dom';
 
 //COMPONENTS
-//=============== Component imports commented out below are for future components. Uncomment when component is complete============
-import Login from '../Login';
-import Register from '../Register';
+import Login from '../../pages/Login';
+import Register from '../../pages/Register';
 import About from '../pages/About';
 import Entry from '../pages/Entry'
+//=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
 // import Profile from '../Profile';
 // import Memorial from '../Memorial';
