@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 //COMPONENTS
-import PageHeader from '../../components/PageHeader';
-import SubmitButton from '../../components/SubmitButton';
+import PageHeader from '../../components/headers/PageHeader';
+import SubmitButton from '../../components/buttons/SubmitButton';
 
 // STYLESHEETS
 import './login.css';

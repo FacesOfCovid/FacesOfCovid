@@ -4,24 +4,27 @@ import React from 'react';
 import './profile.css';
 
 // COMPONENTS
-
+import PageHeader from '../../components/headers/PageHeader';
+import SubHeader from '../../components/headers/SubHeader';
+import PasswordButton from '../../components/buttons/PasswordButton';
 
 const Profile = () => {
     return (
-        <div>
-            <h3>Profile</h3>
+        <div className="profile-container">
+            <PageHeader title="Profile" />
             <img src="#" alt="Profile Picture"/>
-            <div>FirstName LastName</div>
-            <p>
+            <SubHeader title="FirstName LastName" />
+            <p className="profile-info">
                 <strong>E-Mail: </strong>
+                <br />
                 <span>user@email.com</span>
             </p>
-            <p>
-                <strong>Joined on:</strong>
+            <p className="profile-info">
+                <strong>Joined on: </strong>
+                <br />
                 <span>MM/DD/YYYY</span>
             </p>
-            <button>Change Password</button>
-            <p>
+            <p className="profile-info">
                 <strong>Entries: </strong>
                 <ul>
                     <li>
@@ -29,6 +32,10 @@ const Profile = () => {
                     </li>
                 </ul>
             </p>
+            <br />
+
+            <PasswordButton label='Change Password' />
+            <PasswordButton label='Edit Profile' />
         </div>
     );
 };
