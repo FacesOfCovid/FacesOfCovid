@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 //COMPONENTS
 import Login from '../Login';
 import Register from '../Register';
+import Profile from '../../pages/Profile';
 
 // STYLESHEETS
 import "./wrapper.css";
@@ -13,6 +14,8 @@ const Wrapper = () => {
         <div className="wrapper">
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+
+            <Route path="/profile" component={Profile} />
         </div>
     );
 };
