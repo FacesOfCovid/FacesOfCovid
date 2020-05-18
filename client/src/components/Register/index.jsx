@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '../../config/freabaseAuth';
 
 
 //STYLESHEET
@@ -9,6 +10,12 @@ import TitleLogo from '../TitleLogo';
 
 const Register = (props) => {
     const [user, setUser] = useState({ username: "", password: "", password2: "" });
+
+  /**
+   * Get the Auth instance from context
+   */
+
+  const auth = useAuth();
 
 
     //sets user name, password and password2   
@@ -25,9 +32,7 @@ const Register = (props) => {
         e.preventDefault();
         //verify password inputs match 
         if (user.password2 === user.password) {
-            //============================================================
-            //=============add code here to register user=================
-            //============================================================
+            auth.signUp(user.username, user.password);
             resetForm();
             props.history.push('./login');
         } else {
