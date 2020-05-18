@@ -32,6 +32,7 @@ const Register = (props) => {
         e.preventDefault();
         //verify password inputs match 
         if (user.password2 === user.password) {
+            //TODO do some validation for username and password before making call. Catch error to show on the screen.
             auth.signUp(user.username, user.password);
             resetForm();
             props.history.push('./login');

@@ -8,8 +8,6 @@ import { AuthProvider } from "../config/freabaseAuth";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Wrapper from "./Wrapper";
-import Login from "./Login";
-import Register from "./Register";
 
 
 function App() {
@@ -19,9 +17,7 @@ function App() {
     <AuthProvider>
     <BrowserRouter>
       <Navbar />
-      <Login/>
       <Wrapper />
-      <Register />
       <Footer />
     </BrowserRouter>
     </AuthProvider>
