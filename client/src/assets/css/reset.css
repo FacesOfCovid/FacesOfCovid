@@ -35,3 +35,8 @@ a:hover {
 	font-weight: bold;
 	text-decoration: none;
 }
+
+hr {
+	border: none;
+	border-bottom: 1px solid #D3AD6E;
+}
