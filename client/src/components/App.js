@@ -1,22 +1,24 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
+import FirebaseContext from "../config/firebaseContext";
+import Firebase from "../config/firebase";
+import { AuthProvider } from "../config/freabaseAuth";
 
 // COMPONENTS
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Wrapper from "./Wrapper";
+import Router from "./Router";
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <FirebaseContext.Provider value = {Firebase}>
+    <AuthProvider>
       <Navbar />
-
-      <Wrapper />
-
+      <Router />
       <Footer />
-    </BrowserRouter >
-
+    </AuthProvider>
+    </FirebaseContext.Provider>
+    
   )
 }
 
