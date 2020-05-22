@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../../config/freabaseAuth';
 
 //COMPONENTS
 import PageHeader from '../../components/headers/PageHeader';
@@ -14,6 +15,11 @@ import TitleLogo from '../../components/TitleLogo';
 const Register = (props) => {
     const [user, setUser] = useState({ username: "", password: "", password2: "" });
 
+    /**
+     * Get the Auth instance from context
+     */
+
+    const auth = useAuth();
 
     //sets user name, password and password2   
     const onChange = e => {
@@ -29,9 +35,8 @@ const Register = (props) => {
         e.preventDefault();
         //verify password inputs match 
         if (user.password2 === user.password) {
-            //============================================================
-            //=============add code here to register user=================
-            //============================================================
+            //TODO do some validation for username and password before making call. Catch error to show on the screen.
+            auth.signUp(user.username, user.password);
             resetForm();
             props.history.push('./login');
         } else {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../../config/freabaseAuth';
 
 //COMPONENTS
 import PageHeader from '../../components/headers/PageHeader';
@@ -12,6 +13,12 @@ const Login = () => {
 
     const [user, setUser] = useState({ username: '', password: '' });
 
+    /**
+     * Get the Auth instance from context
+     */
+
+    const auth = useAuth();
+
     //sets user name and password  
     const onChange = e => {
         setUser({ ...user, [e.target.name]: e.target.value });
@@ -21,7 +28,8 @@ const Login = () => {
     // send username and password to be verified
     const onSubmit = e => {
         e.preventDefault();
-        //==================add code to verify here================
+    //TODO do some validation for username and password before making call. Catch error to show on the screen.
+        auth.signIn(user.username, user.password);
     }
 
     return (
