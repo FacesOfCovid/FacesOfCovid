@@ -5,7 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import About from '../../pages/About';
-import Memorial from '../../pages/Entry'
+import Memorial from '../../pages/Entry';
+import Feed from '../../pages/Feed';
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
 // import Profile from '../Profile';
@@ -32,6 +33,9 @@ const Router = () => {
                     {/* <Route path="/profile" component={Profile}/> */}
                     <Route path="/about" >
                         <About />
+                    </Route>
+                    <Route path="/feed">
+                        <Feed />
                     </Route>
                     <Route path="/memorial/:id">
                         <Memorial />
