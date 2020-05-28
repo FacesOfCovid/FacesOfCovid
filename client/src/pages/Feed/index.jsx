@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import testEntries from '../../../src/testEntries';
 
 //COMPONENTS
 import MemorialList from "../../components/MemorialList"
@@ -7,7 +8,8 @@ import PageHeader from '../../components/headers/PageHeader';
 import './feed.css';
 
 const Feed = () => {
-    const [entries, setEntries] = useState(Array.from(Array(30).keys(), n => n + 1));
+    // const [entries, setEntries] = useState(Array.from(Array(30).keys(), n => n + 1));
+
     const [isFetching, setIsFetching] = useState(false);
 
     //calls handleScroll function when window scrolls
@@ -27,7 +29,7 @@ const Feed = () => {
         setIsFetching(true);
     }
 
-    //Fetches more entries then sets isFetching to false
+    //Fetches more entries, then sets isFetching to false
     function fetchMoreEntries() {
         setTimeout(() => {
             setEntries(prevState => ([...prevState, ...Array.from(Array(20).keys(), n => n + prevState.length + 1)]));
@@ -37,7 +39,9 @@ const Feed = () => {
 
     return (
         <div className="Feed container">
+
             <PageHeader title="feed" />
+
             <div className="row">
                 <div className="col-6 justify-content-center my-5">
                     <MemorialList entries={entries} msg={isFetching && 'Loading more memorials'} />
