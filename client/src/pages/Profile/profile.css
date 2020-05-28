@@ -6,3 +6,11 @@
 .profile-info {
     margin-bottom: 1.5rem;
 }
+
+.profile-info ul li a:hover {
+    font-weight: bold;
+}
+
+.profile-info ul li a:active {
+    font-weight: bold;
+}
