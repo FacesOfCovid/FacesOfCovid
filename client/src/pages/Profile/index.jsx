@@ -4,15 +4,18 @@ import React from 'react';
 import './profile.css';
 
 // COMPONENTS
+import EmptyImage from '../../components/placeholders_images/EmptyImage';
+import Image from '../../components/placeholders_images/Image';
 import PageHeader from '../../components/headers/PageHeader';
-import SubHeader from '../../components/headers/SubHeader';
 import PasswordButton from '../../components/buttons/PasswordButton';
+import SubHeader from '../../components/headers/SubHeader';
 
 const Profile = () => {
     return (
         <div className="profile-container">
             <PageHeader title="Profile" />
-            <img src="#" alt="Profile Picture"/>
+            {/* insert logic here: !profilePic ? <EmptyImage /> : <Image /> */}
+            <EmptyImage />
             <SubHeader title="FirstName LastName" />
             <p className="profile-info">
                 <strong>E-Mail: </strong>
