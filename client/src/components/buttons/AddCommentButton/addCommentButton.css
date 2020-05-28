@@ -1,0 +1,8 @@
+.add-comment-button {
+    background-color: #FEECCD;
+    border: 1px solid #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

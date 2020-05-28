@@ -1,7 +1,9 @@
 import React from 'react';
-import "./entry.css"
 
-const Entry = () => {
+// STYLESHEET
+import "./addMemorial.css"
+
+const AddMemorial = () => {
   return (
     <div className="container-fluid">
       <div className="card">
@@ -259,4 +261,4 @@ const Entry = () => {
   )
 }
 
-export default Entry;
+export default AddMemorial;

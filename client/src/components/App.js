@@ -11,14 +11,13 @@ import Router from "./Router";
 function App() {
 
   return (
-    <FirebaseContext.Provider value = {Firebase}>
-    <AuthProvider>
-      <Navbar />
-      <Router />
-      <Footer />
-    </AuthProvider>
+    <FirebaseContext.Provider value={Firebase}>
+      <AuthProvider>
+        <Navbar />
+        <Router />
+        <Footer />
+      </AuthProvider>
     </FirebaseContext.Provider>
-    
   )
 }
 
