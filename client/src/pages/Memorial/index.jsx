@@ -40,6 +40,9 @@ const Memorial = () => {
             </p>
             <hr />
             <AddCommentButton />
+
+            {/* Future comment section goes here */}
+            
             <PasswordButton label="Edit Memorial" />
         </div>
     );

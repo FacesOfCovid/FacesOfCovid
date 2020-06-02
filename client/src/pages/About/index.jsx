@@ -5,6 +5,16 @@ import Dev from './Dev';
 
 const devs = [
   {
+    name: 'James Appello',
+    position: 'currently helping my father with his small business; seeking steady employment',
+    company: 'Parker Trask Services, LLC.',
+    about: 'Ambitious, avid learner in pursuit of happiness and the American Dream to provide a means for others to find their own path out of poverty creating their own prosperity for their families for generations to come (hopefully someday).',
+    portfolio: 'https://my-nxt-portfolio.now.sh/',
+    linkedin: 'https://wwww.linkedin.com/in/jamesappello/',
+    github: 'https://www.github.com/jamesAppello',
+    twitter: 'https://twitter.com/semajbackwards_'
+  },
+  {
     image: 'https://media-exp1.licdn.com/dms/image/C4D03AQFHByycxqnQ5g/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=CLI0BNb39QKOmrFEVX1yfh76Ti_K9ILR6Ybj7n5rxpI',
     name: 'Nadine Juraschek',
     position: 'Frontend Engineer',
