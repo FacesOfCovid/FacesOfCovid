@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import API from '../services/API';
+import testEntries from '../testEntries';
 
-export default function useInfiniteScroll(query, pageNumber) {
+export default function useInfiniteScroll(pageNumber) {
 
     useEffect(() => {
-        axios({
-            method: 'GET',
-            url: 
-})
+        let res = testEntries;
+        console.log(testEntries[1])
+    }, [pageNumber])
 
-    }, [query, pageNumber])
+
     return null;
 }

@@ -1,90 +1,69 @@
-// import React from 'react';
+import React, { useState, useEffect } from "react";
+import { render } from "react-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-// const MemorialList = (props) => {
+//temp styling
+const style = {
+    height: 500,
+    width: 500,
+    margin: 6,
+    padding: 8,
 
-//     return (
-//         <div className="MemorialList">
-//             <ul className="list-group mb-2">
-//                 {props.entries.map(entry => <li className="list-group-item"><img src={entry}></img></li>)}
-//             </ul>
-//             {props.msg}
-//         </div>
-//     )
-// }
-
-// export default MemorialList;
-import React, { useState } from "react";
-import { useInfiniteScroll } from "react-infinite-scroll-hook";
-
-
-const ARRAY_SIZE = 20;
-const RESPONSE_TIME = 1000;
-
-function PrintImg() {
-    return (
-        <img
-            src={
-                "https://exitocol.vteximg.com.br/assets/vtex.file-manager-graphql/images/slider-blue-week-desktop___451bdd92df31482e0ece795773e265d9.jpg"
-            }
-        />
-    );
-}
-
-function loadItems(prevArray = [], startCursor = 0) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            let newArray = prevArray;
-
-            for (let i = startCursor; i < startCursor + ARRAY_SIZE; i++) {
-                const newItem = {
-                    key: i,
-                    value: `This is item ${i}`
-                };
-                newArray = [...newArray, newItem];
-            }
-
-            resolve(newArray);
-        }, RESPONSE_TIME);
-    });
-}
-
-function InfiniteList({ scrollContainer }) {
-    const [loading, setLoading] = useState(false);
-    const [items, setItems] = useState([]);
-
-    function handleLoadMore() {
-        setLoading(true);
-        loadItems(items, items.length).then(newArray => {
-            setLoading(false);
-            setItems(newArray);
-        });
-    }
-
-    const infiniteRef = useInfiniteScroll({
-        loading,
-        // This value is set to "true" for this demo only. You will need to
-        // get this value from the API when you request your items.
-        hasNextPage: true,
-        threshold: 400,
-        onLoadMore: handleLoadMore,
-        scrollContainer
-    });
-
-    return (
-        <List ref={infiniteRef}>
-            {items.map(item => (
-                <ListItem key={item.key}>
-                    {item.value}
-                    <PrintImg />
-                </ListItem>
-            ))}
-            {loading && <ListItem>Loading...</ListItem>}
-        </List>
-    );
-}
-
-InfiniteList.propTypes = {
-    scrollContainer: PropTypes.oneOf(["window", "parent"])
 };
 
-export default InfiniteList;
+
+const MemorialList = () => {
+    // Memorials is an array of numbers now, but will be an array of memorial data from the backend
+    const [memorials, setMemorials] = useState(Array.from({ length: 20 }))
+
+    const [hasMore, setHasMore] = useState(true);
+
+    const fetchMoreData = () => {
+        //fake page of data
+        const moreMemorials = Array.from({ length: 20 });
+
+        if (memorials.length >= 200) {
+            setHasMore(false);
+            return;
+        }
+        // this setTimeout is a fake async api call which sends
+        // 20 more records in .5 secs to simulate call to backend
+        // remove after backend is implemented
+        setTimeout(() => {
+            setMemorials(memorials.concat(moreMemorials))
+        }, 500);
+    };
+
+    return (
+        <div>
+            <h1></h1>
+            <hr />
+            <InfiniteScroll
+                dataLength={memorials.length}
+                next={fetchMoreData}
+                hasMore={hasMore}
+                loader={<h4>Loading...</h4>}
+                height={400}
+                endMessage={
+                    <p style={{ textAlign: "center" }}>
+                        <b>Yay! You have seen it all</b>
+                    </p>
+                }
+            >
+                {memorials.map((i, index) => (
+                    <div className="text-center" style={style} key={index}>
+                        <img className="mx-auto d-block" src="https://picsum.photos/400/300"></img>
+                        <h3>#{index} [Name goes here]</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                    </div>
+                ))}
+            </InfiniteScroll>
+        </div>
+    );
+}
+
+
+export default MemorialList;
+
+
