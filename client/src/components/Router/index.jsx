@@ -8,7 +8,7 @@ import About from '../../pages/About';
 import Memorial from '../../pages/Entry'
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
-// import Profile from '../Profile';
+import Profile from '../../pages/Profile';
 // import NoMatch from '../404';
 
 // STYLESHEETS
@@ -29,7 +29,9 @@ const Router = () => {
                     <Route path="/register">
                         <Register />
                     </Route>
-                    {/* <Route path="/profile" component={Profile}/> */}
+                    <Route path="/profile">
+                        <Profile />
+                    </Route>
                     <Route path="/about" >
                         <About />
                     </Route>
