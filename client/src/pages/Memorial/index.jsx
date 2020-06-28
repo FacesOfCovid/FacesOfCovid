@@ -11,7 +11,7 @@ import AddCommentButton from '../../components/buttons/AddCommentButton';
 
 const Memorial = () => {
     return (
-        <div className="memorial-container">
+        <div className="container">
             <MemorialHeader className="memorial-sub" title="Remembering" name="FirstName LastName" />
             {/* insert logic here: !profilePic ? <EmptyImage /> : <Image /> */}
             <EmptyImage />

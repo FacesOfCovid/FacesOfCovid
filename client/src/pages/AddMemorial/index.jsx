@@ -5,9 +5,8 @@ import "./addMemorial.css"
 
 const AddMemorial = () => {
   return (
-    <div className="container-fluid">
-      <div className="card">
-        <form className="entry-form">
+    <div className="container">
+        <form action="#">
           <div className="form-group">
             <label for="first-name">First Name: </label>
             <input id="first-name" type="text" placeholder="George" required></input>
@@ -256,7 +255,6 @@ const AddMemorial = () => {
             </input>
           </div>
         </form >
-      </div >
     </div>
   )
 }
