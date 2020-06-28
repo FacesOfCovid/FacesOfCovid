@@ -7,11 +7,11 @@ import './memorial.css';
 import EmptyImage from '../../components/placeholders_images/EmptyImage';
 import Image from '../../components/placeholders_images/Image';
 import MemorialHeader from '../../components/headers/MemorialHeader';
-import AddCommentButton from '../../components/buttons/AddCommentButton';
+import PasswordButton from '../../components/buttons/PasswordButton';
 
 const Memorial = () => {
     return (
-        <div className="container">
+        <>
             <MemorialHeader className="memorial-sub" title="Remembering" name="FirstName LastName" />
             {/* insert logic here: !profilePic ? <EmptyImage /> : <Image /> */}
             <EmptyImage />
@@ -42,8 +42,8 @@ const Memorial = () => {
                 <p className="">by Author Name</p>
             </p>
             <hr />
-            <AddCommentButton />
-        </div>
+            <PasswordButton label="Add Comment" />
+        </>
     );
 };
 

@@ -3,10 +3,10 @@ import React from 'react';
 // STYLESHEETS
 import './pageHeader.css';
 
-const PageHeader = (props) => {
+const PageHeader = ({title}) => {
     return (
         <div className="page-header">
-            {props.title}
+            {title}
         </div>
     );
 };

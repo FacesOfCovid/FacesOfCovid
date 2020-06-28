@@ -3,10 +3,10 @@ import React from 'react';
 // STYLESHEETS
 import './submitButton.css';
 
-const SubmitButton = (props) => {
+const SubmitButton = ({label}) => {
     return (
         <button className="submit-button">
-            {props.label}
+            {label}
         </button>
     );
 };
