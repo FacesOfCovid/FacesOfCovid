@@ -6,9 +6,10 @@ import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import About from '../../pages/About';
 import AddMemorial from '../../pages/AddMemorial'
+import Memorial from '../../pages/Entry';
+import Feed from '../../pages/Feed';
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
-import Memorial from '../../pages/Memorial'
 import Profile from '../../pages/Profile';
 // import NoMatch from '../404';
 
@@ -40,8 +41,11 @@ const Router = () => {
                         <About />
                     </Route>
 
-                    {/* <Route path="/memorial/:id"> */}
-                    <Route path="/memorial">
+                    <Route path="/feed">
+                        <Feed />
+                    </Route>
+
+                    <Route path="/memorial/:id">
                         <Memorial />
                     </Route>
 
