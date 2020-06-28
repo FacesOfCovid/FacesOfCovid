@@ -6,7 +6,7 @@ import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import About from '../../pages/About';
 import AddMemorial from '../../pages/AddMemorial'
-import Memorial from '../../pages/Entry';
+import Memorial from '../../pages/Memorial';
 import Feed from '../../pages/Feed';
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
@@ -46,6 +46,10 @@ const Router = () => {
                     </Route>
 
                     <Route path="/memorial/:id">
+                        <Memorial />
+                    </Route>
+
+                    <Route path="/memorial/test">
                         <Memorial />
                     </Route>
 

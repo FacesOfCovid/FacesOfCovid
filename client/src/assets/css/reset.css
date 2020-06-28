@@ -2,31 +2,30 @@ html {
 	box-sizing: border-box;
 	font-size: 10px;
 }
-  
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-  
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	color: #161310;
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, a {
+	color: #4B4B4B;
 	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
 }
-  
+
 ol, ul {
 	list-style: none;
 }
-  
+
 img {
 	max-width: 100%;
 	height: auto;
 }
 
 a {
-	color: #161310;
 	text-decoration: none;
 }
 
@@ -39,4 +38,6 @@ a:hover {
 hr {
 	border: none;
 	border-bottom: 1px solid #D3AD6E;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
