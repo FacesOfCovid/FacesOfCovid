@@ -1,0 +1,38 @@
+.feed-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+}
+
+.feed-item {
+    box-shadow: grey 0 0 5px;
+    position: relative;
+
+    height: 20rem;
+    width: 100%;
+}
+
+.feed-item img {
+    object-fit: cover;
+}
+
+.feed-name {
+    color: #161310;
+    padding: 0 24px;
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+    .feed-item {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .feed-item {
+        width: 60%;
+    }
+}

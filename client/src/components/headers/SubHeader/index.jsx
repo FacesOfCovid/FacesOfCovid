@@ -3,10 +3,10 @@ import React from 'react';
 // STYLESHEETS
 import './subHeader.css';
 
-const SubHeader = (props) => {
+const SubHeader = ({ title }) => {
     return (
         <div className="sub-header">
-            {props.title}
+            {title}
         </div>
     );
 };

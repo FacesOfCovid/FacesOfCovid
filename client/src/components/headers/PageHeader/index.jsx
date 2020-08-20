@@ -5,9 +5,9 @@ import './pageHeader.css';
 
 const PageHeader = ({title}) => {
     return (
-        <div className="page-header">
+        <h1 className="page-header">
             {title}
-        </div>
+        </h1>
     );
 };
 

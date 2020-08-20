@@ -7,7 +7,7 @@ function TitleLogo() {
     return (
         <div className="titleLogoWrapper">
             <div className="logo"></div>
-            <span className="title">Faces of Covid</span>
+            <span className="title">Traces of Covid</span>
         </div>
     )
 }

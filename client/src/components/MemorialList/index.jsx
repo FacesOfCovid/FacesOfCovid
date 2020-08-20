@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { render } from "react-dom";
+import React, { useState } from "react";
+// import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-//temp styling
-const style = {
-    height: 500,
-    width: 500,
-    margin: 6,
-    padding: 8,
+// STYLES
+import "./memorialList.css";
 
-};
-
+// COMPONENTS
+import BlackWhiteImage from "../images/BackWhiteImage";
 
 const MemorialList = () => {
     // Memorials is an array of numbers now, but will be an array of memorial data from the backend
     const [memorials, setMemorials] = useState(Array.from({ length: 20 }))
-
     const [hasMore, setHasMore] = useState(true);
 
     const fetchMoreData = () => {
@@ -35,15 +30,13 @@ const MemorialList = () => {
     };
 
     return (
-        <div>
-            <h1></h1>
-            <hr />
+        <>
             <InfiniteScroll
+                className="feed-grid"
                 dataLength={memorials.length}
                 next={fetchMoreData}
                 hasMore={hasMore}
                 loader={<h4>Loading...</h4>}
-                height={400}
                 endMessage={
                     <p style={{ textAlign: "center" }}>
                         <b>Yay! You have seen it all</b>
@@ -51,15 +44,14 @@ const MemorialList = () => {
                 }
             >
                 {memorials.map((i, index) => (
-                    <div className="text-center" style={style} key={index}>
-                        <img className="mx-auto d-block" src="https://picsum.photos/400/300"></img>
-                        <h3>#{index} [Name goes here]</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
+                    <div className="feed-item" key={index}>
+                        <BlackWhiteImage src="https://picsum.photos/400/300" alt="Name goes here"/>
+                        <h3 className="feed-name">First Name Last Name, age</h3>
+                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> */}
                     </div>
                 ))}
             </InfiniteScroll>
-        </div>
+        </>
     );
 }
 

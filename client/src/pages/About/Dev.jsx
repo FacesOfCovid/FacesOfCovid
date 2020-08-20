@@ -3,7 +3,7 @@ import React from 'react';
 const Dev = ( {dev} ) => {
     return (
         <div className="dev">
-            <img src="{dev.image}" alt="{dev.name} Picture"/>
+            <img className="dev-img" src={dev.image} alt="Developer" />
             <h2 className="dev-name">{dev.name}</h2>
             <h5 className="dev-job">{dev.position} at {dev.company}</h5>
             { (dev.project) ? <h5 className="dev-job">{dev.project}</h5> : '' }

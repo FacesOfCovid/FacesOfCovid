@@ -10,7 +10,6 @@ html {
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, a {
 	color: #4B4B4B;
 	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-	font-size: 16px;
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
@@ -21,8 +20,9 @@ ol, ul {
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
 }
 
 a {
@@ -40,4 +40,55 @@ hr {
 	border-bottom: 1px solid #D3AD6E;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+h6 {
+	font-weight: 1.25rem;
+}
+
+h6, p, ol, ul, li {
+	font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 600px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+}
+
+@media only screen and (min-width: 900px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
 }

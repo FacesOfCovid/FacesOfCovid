@@ -1,11 +1,10 @@
 import React from 'react';
 
-// STYLESHEETS
+// STYLES
 import './memorial.css';
 
 // COMPONENTS
-import EmptyImage from '../../components/placeholders_images/EmptyImage';
-import Image from '../../components/placeholders_images/Image';
+import EmptyImage from '../../components/images/EmptyImage';
 import MemorialHeader from '../../components/headers/MemorialHeader';
 import PasswordButton from '../../components/buttons/PasswordButton';
 
