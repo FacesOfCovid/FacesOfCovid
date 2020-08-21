@@ -1,0 +1,28 @@
+.memorial-form input,
+.memorial-form label,
+.memorial-form h5 {
+  margin: 5px auto;
+  width: 100%;
+}
+
+.memorial-form label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.memorial-form .form-group {
+  margin-bottom: 4rem;
+}
+
+.memorial-form select {
+  border: none;
+  border-bottom: 1px solid #D3AD6E;
+}
+
+#birthmonth, #birthday, #deathmonth, #deathday {
+  margin-right: 2rem;
+}
+
+.heading{
+  margin-left: 4px;
+}

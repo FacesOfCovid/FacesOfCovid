@@ -1,14 +1,14 @@
 footer {
-    background-color: #FAF8F2;
-    padding: 0.5rem;
-    position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.18);
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-footer p, 
+footer p,
 footer p a {
     color: #262626;
     cursor: pointer;
@@ -19,4 +19,10 @@ footer p a {
 footer p a:hover {
     color: #886D52;
     font-weight: 700;
+}
+
+@media only screen and (min-width: 900px) {
+    footer p, footer p a {
+        font-size: 0.65rem;
+    }
 }

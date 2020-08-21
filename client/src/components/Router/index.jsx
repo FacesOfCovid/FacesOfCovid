@@ -5,7 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import About from '../../pages/About';
-import Memorial from '../../pages/Entry';
+import AddMemorial from '../../pages/AddMemorial';
+import Memorial from '../../pages/Memorial';
 import Feed from '../../pages/Feed';
 //=============== Component imports commented out below are for future components. Uncomment when component is complete============
 // import Home from '../Home';
@@ -24,24 +25,38 @@ const Router = () => {
                     {/* =============== Routes commented out below are for future components. Uncomment when component is complete. ===============  */}
 
                     {/* <Route path="/" component={Home} /> */}
-                    <Route path="/login">
+                    <Route exact path="/login">
                         <Login />
                     </Route>
-                    <Route path="/register">
+
+                    <Route exact path="/register">
                         <Register />
                     </Route>
-                    <Route path="/profile">
+
+                    <Route exact path="/profile">
                         <Profile />
                     </Route>
-                    <Route path="/about" >
+
+                    <Route exact path="/about" >
                         <About />
                     </Route>
-                    <Route path="/feed">
+
+                    <Route exact path="/feed">
                         <Feed />
                     </Route>
-                    <Route path="/memorial/:id">
+
+                    <Route exact path="/memorial/:id">
                         <Memorial />
                     </Route>
+
+                    <Route exact path="/memorial/test">
+                        <Memorial />
+                    </Route>
+
+                    <Route exact path="/create">
+                        <AddMemorial />
+                    </Route>
+
                     {/* <Route component={NoMatch}/> */}
 
                 </Switch>

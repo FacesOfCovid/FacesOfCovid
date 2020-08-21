@@ -1,0 +1,26 @@
+.memorial-info {
+    margin: 0.5rem auto 2rem;
+}
+
+.memorial-info p {
+    margin-bottom: 1rem;
+}
+.memorial-info p:last-child {
+    margin-bottom: 0;
+}
+
+.memorial-dates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.indent {
+    width: 5rem;
+}
+
+.obituary p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+}

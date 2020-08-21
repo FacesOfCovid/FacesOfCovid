@@ -1,9 +1,21 @@
 .wrapper {
-    height: 100vh;
-    padding: 7.5rem 2rem 1.75rem;
+    padding: 24px;
+    min-height: calc(100vh - 105px);
     width: 100%;
+    max-width: 120rem;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+main {
+    width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+    .wrapper {
+        padding: 24px 40px;
+    }
 }

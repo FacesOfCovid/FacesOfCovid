@@ -33,7 +33,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <>
             <PageHeader title="Log In"></PageHeader>
             <form onSubmit={onSubmit} className="loginForm">
                 <div className="form-section">
@@ -56,10 +56,10 @@ const Login = () => {
                 <SubmitButton label="Log In"></SubmitButton>
                 <div className="forgot-pw">
                     <p>Forgot Password?</p>
-                    <p>Don't have an account? <Link className="redirect" to="/Register">Register</Link></p>
+                    <p>Don't have an account? <Link className="redirect" to="/register">Register</Link></p>
                 </div>
             </form>
-        </div>
+        </>
     )
 }
 

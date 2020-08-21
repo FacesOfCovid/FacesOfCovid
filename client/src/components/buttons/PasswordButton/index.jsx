@@ -3,10 +3,10 @@ import React from 'react';
 // STYLESHEETS
 import './passwordButton.css';
 
-const PasswordButton = (props) => {
+const PasswordButton = ({ label }) => {
     return (
         <button className="change-pw-button">
-            {props.label}
+            {label}
         </button>
     );
 };

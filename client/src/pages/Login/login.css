@@ -1,5 +1,5 @@
 form {
-   width: 26rem;
+   width: 28rem;
 }
 
 .form-section {
@@ -47,8 +47,8 @@ input {
 
 .redirect {
    color: #D3AD6E;
+   font-weight: 600;
 }
 .redirect:hover {
    color: #D3AD6E;
-   font-weight: 600;
 }
