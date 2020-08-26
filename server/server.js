@@ -14,6 +14,9 @@ if (process.env.NODE_ENV === "production") {
 }
 //Routes
 // app.use(routes);
+// app.get('/', function (req, res) {
+//     res.send('hello world')
+// })
 
 //Database connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/memorialdb", {
