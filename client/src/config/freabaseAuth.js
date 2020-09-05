@@ -20,11 +20,11 @@ function useProvideAuth() {
   /**
    * Get the Firebase instance from context
    */
-  
+
   const Firebase = useContext(FirebaseContext);
 
   const [user, setUser] = useState(null);
-  
+
   // Wrap any Firebase methods we want to use making sure ...
   // ... to save the user to state.
   const signIn = (email, password) => {
@@ -90,7 +90,7 @@ function useProvideAuth() {
     // Cleanup subscription on unmount
     return () => unsubscribe();
   }, [Firebase]);
-  
+
   // Return the user object and auth methods
   return {
     user,

@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const routes = require("./routes/routes");
+const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,10 +13,10 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 //Routes
-// app.use(routes);
-// app.get('/', function (req, res) {
-//     res.send('hello world')
-// })
+app.use(routes);
+app.get('/', function (req, res) {
+    res.send('hello world')
+})
 
 //Database connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/memorialdb", {
