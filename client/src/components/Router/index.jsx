@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 
 //COMPONENTS
 import Login from '../../pages/Login';
@@ -45,8 +45,8 @@ const Router = () => {
                         <Feed />
                     </Route>
 
-                    <Route exact path="/memorial/:id">
-                        <Memorial />
+                    <Route exact path="/memorial/:id" children={<Memorial />}>
+
                     </Route>
 
                     <Route exact path="/memorial/test">
@@ -61,7 +61,7 @@ const Router = () => {
 
                 </Switch>
             </BrowserRouter>
-        </div>
+        </div >
     );
 };
 

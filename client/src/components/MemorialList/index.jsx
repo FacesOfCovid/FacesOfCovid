@@ -21,7 +21,7 @@ const MemorialList = () => {
 
 
     const getMemorials = () => {
-        console.log("initial call")
+        // console.log("initial call")
         API.getMemorials()
             .then(res => {
                 console.log(res.data);
@@ -68,7 +68,7 @@ const MemorialList = () => {
                             dateOfPassing={memorial.dateOfPassing} />
                         <BlackWhiteImage src="https://picsum.photos/400/300" alt={memorial.name} />
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p>{memorial.story}</p>
                         {/* <h3 className="feed-name">{memorial.name}, {memorial.age}</h3> */}
 
                     </div>

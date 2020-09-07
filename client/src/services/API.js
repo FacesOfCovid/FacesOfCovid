@@ -9,10 +9,10 @@ export default {
         console.log("Getting all memorials");
         return axios.get("/api/memorials");
     },
-    // getOneMemorial: function (id) {
-    //     console.log("Getting memorial " + id);
-    //     return axios.get("/api/posts/" + id);
-    // },
+    getOneMemorial: function (id) {
+        console.log("Getting memorial " + id);
+        return axios.get("/api/memorials/" + id);
+    },
     // updateMemorial: function (id, obj) {
     //     console.log("Updating memorial " + id);
     //     return axios.put('/api/posts/' + id, obj);
