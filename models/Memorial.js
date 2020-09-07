@@ -9,7 +9,8 @@ const memorialSchema = new Schema({
     },
     name: { type: String, required: true },
     story: { type: String },
-    age: { type: Number }
+    dateOfBirth: { type: String },
+    dateOfPassing: { type: String }
 });
 
 

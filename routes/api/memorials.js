@@ -9,10 +9,10 @@ router
 
 
 // Matches with "/api/memorials/:id"
-router
-    .route("/:id")
-    .get(memorialsController.findById)
-    .put(memorialsController.update)
-    .delete(memorialsController.remove);
+// router
+//     .route("/:id")
+//     .get(memorialsController.findById)
+//     .put(memorialsController.update)
+//     .delete(memorialsController.remove);
 
 module.exports = router;
