@@ -9,6 +9,7 @@ import './memorial.css';
 import EmptyImage from '../../components/images/EmptyImage';
 import MemorialHeader from '../../components/headers/MemorialHeader';
 import PasswordButton from '../../components/buttons/PasswordButton';
+import BlackWhiteImage from '../../components/images/BackWhiteImage';
 
 const Memorial = () => {
 
@@ -21,7 +22,7 @@ const Memorial = () => {
     }, []);
 
     const getOneMemorial = (id) => {
-        console.log("initial id call");
+        // console.log("initial id call");
         API.getOneMemorial(id)
             .then(res => {
                 console.log(res.data);
@@ -30,13 +31,13 @@ const Memorial = () => {
     };
 
 
-    const { name, dateOfBirth, dateOfPassing } = memorial;
+    const { name, dateOfBirth, dateOfPassing, photo, story } = memorial;
 
     return (
         <>
             <MemorialHeader className="memorial-sub" title="Remembering" name={name} />
-            {/* insert logic here: !profilePic ? <EmptyImage /> : <Image /> */}
-            <EmptyImage />
+            {photo ? <BlackWhiteImage src={photo} /> : <EmptyImage />}
+
             <p className="memorial-info">
                 {/* insert date of birth and date of passing here */}
                 <p className="memorial-dates">
@@ -57,14 +58,15 @@ const Memorial = () => {
                 </p>
             </p>
 
-            {/* Comment Section starts here */}
+            {/* Narrative Section starts here */}
             <hr />
             <p className="obituary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                {story}
                 <p className="">by Author Name</p>
             </p>
             <hr />
-            <PasswordButton label="Add Comment" />
+            {/* I feel like maybe comments aren't appropriate in this app, so I commented out the button */}
+            {/* <PasswordButton label="Add Comment" /> */}
         </>
     );
 };
