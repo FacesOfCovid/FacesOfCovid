@@ -11,7 +11,11 @@ const memorialSchema = new Schema({
     story: { type: String },
     dateOfBirth: { type: String },
     dateOfPassing: { type: String },
-    photo: { type: String }
+    photo: { type: String },
+    cityOfBirth: { type: String },
+    stateOfBirth: { type: String },
+    cityOfResidence: { type: String },
+    stateOfResidence: { type: String },
 });
 
 

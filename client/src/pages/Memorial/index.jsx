@@ -31,11 +31,11 @@ const Memorial = () => {
     };
 
 
-    const { name, dateOfBirth, dateOfPassing, photo, story } = memorial;
+    const { name, dateOfBirth, dateOfPassing, photo, story, stateOfResidence, cityOfResidence, cityOfBirth, stateOfBirth } = memorial;
 
     return (
         <>
-            <MemorialHeader className="memorial-sub" title="Remembering" name={name} />
+            <MemorialHeader className="memorial-sub" title="Remembering" name={name} cityOfResidence={cityOfResidence} stateOfResidence={stateOfResidence} />
             {photo ? <BlackWhiteImage src={photo} /> : <EmptyImage />}
 
             <p className="memorial-info">
@@ -50,12 +50,13 @@ const Memorial = () => {
                 </p>
                 <p>
                     <strong>Place of Birth: </strong>
-                    <span>Birth Location</span>
+                    <span>{cityOfBirth}, {stateOfBirth}</span>
                 </p>
-                <p>
+                {/* I moved last residence to the header and commented it out below */}
+                {/* <p>
                     <strong>Residence: </strong>
                     <span>Last Home Location</span>
-                </p>
+                </p> */}
             </p>
 
             {/* Narrative Section starts here */}

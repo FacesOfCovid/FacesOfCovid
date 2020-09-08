@@ -56,7 +56,7 @@ const MemorialList = () => {
                 loader={<h4>Loading...</h4>}
                 endMessage={
                     <p style={{ textAlign: "center" }}>
-                        <b>Yay! You have seen it all</b>
+                        <b>end</b>
                     </p>
                 }
             >

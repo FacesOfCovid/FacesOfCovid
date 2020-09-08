@@ -3,14 +3,14 @@ import React from 'react';
 // STYLESHEETS
 import './memorialHeader.css';
 
-const MemorialHeader = ({ name, residence }) => {
+const MemorialHeader = ({ name, cityOfResidence, stateOfResidence }) => {
     return (
         <div className="memorial-header">
             <div className="memorial-name">
                 {name}
             </div>
             <div className="residence">
-                {residence}
+                {cityOfResidence}, {stateOfResidence}
             </div>
         </div>
     );
