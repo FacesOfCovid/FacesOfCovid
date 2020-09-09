@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 // import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import API from "../../services/API"
@@ -29,6 +30,10 @@ const MemorialList = () => {
             })
     };
 
+    //truncates a string to a given number of words
+    const truncate = (str, numberOfWords) => {
+        return str.split(" ").splice(0, numberOfWords).join(" ");
+    }
 
     const fetchMoreData = () => {
         //fake page of data
@@ -61,17 +66,20 @@ const MemorialList = () => {
                 }
             >
                 {memorials.map((memorial, index) => (
+                    // <Link to={'/memorial/' + memorial._id}>
                     <div className="feed-item" key={index}>
+
                         <MemorialHeader
                             name={memorial.name}
-                            dateOfBirth={memorial.dateOfBirth}
-                            dateOfPassing={memorial.dateOfPassing} />
+                            cityOfResidence={memorial.cityOfResidence}
+                            stateOfResidence={memorial.stateOfResidence} />
                         <BlackWhiteImage src="https://picsum.photos/400/300" alt={memorial.name} />
 
-                        <p>{memorial.story}</p>
+                        <p>{truncate(memorial.story, 25)}...</p>
                         {/* <h3 className="feed-name">{memorial.name}, {memorial.age}</h3> */}
 
                     </div>
+                    // </Link>
                 ))}
             </InfiniteScroll>
         </>
