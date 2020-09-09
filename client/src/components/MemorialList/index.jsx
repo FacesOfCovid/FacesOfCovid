@@ -66,20 +66,22 @@ const MemorialList = () => {
                 }
             >
                 {memorials.map((memorial, index) => (
-                    // <Link to={'/memorial/' + memorial._id}>
+
                     <div className="feed-item" key={index}>
 
-                        <MemorialHeader
-                            name={memorial.name}
-                            cityOfResidence={memorial.cityOfResidence}
-                            stateOfResidence={memorial.stateOfResidence} />
-                        <BlackWhiteImage src="https://picsum.photos/400/300" alt={memorial.name} />
+                        <Link to={'/memorial/' + memorial._id}>
+                            <MemorialHeader
+                                name={memorial.name}
+                                cityOfResidence={memorial.cityOfResidence}
+                                stateOfResidence={memorial.stateOfResidence} />
+                            <BlackWhiteImage src="https://picsum.photos/400/300" alt={memorial.name} />
 
-                        <p>{truncate(memorial.story, 25)}...</p>
-                        {/* <h3 className="feed-name">{memorial.name}, {memorial.age}</h3> */}
+                            <p className='memorial-blurb'>{truncate(memorial.story, 25)}...</p>
+                            {/* <h3 className="feed-name">{memorial.name}, {memorial.age}</h3> */}
+                        </Link>
 
                     </div>
-                    // </Link>
+
                 ))}
             </InfiniteScroll>
         </>

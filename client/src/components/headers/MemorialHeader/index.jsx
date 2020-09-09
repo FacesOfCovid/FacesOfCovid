@@ -9,7 +9,7 @@ const MemorialHeader = ({ name, cityOfResidence, stateOfResidence }) => {
             <div className="memorial-name">
                 {name}
             </div>
-            <div className="residence">
+            <div className="memorial-residence">
                 {cityOfResidence}, {stateOfResidence}
             </div>
         </div>
