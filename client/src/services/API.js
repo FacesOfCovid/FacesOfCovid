@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 export default {
-    // addMemorial: function (obj) {
-    //     console.log("Adding memorial ");
-    //     return axios.post('/api/posts', obj);
-    // },
+    addMemorial: function (obj) {
+        console.log("Adding memorial ");
+        return axios.post('/api/posts', obj);
+    },
     getMemorials: function () {
         console.log("Getting all memorials");
         return axios.get("/api/memorials");

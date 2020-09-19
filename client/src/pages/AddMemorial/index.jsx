@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
-
+import React, { useState, useContext } from 'react';
+import API from '../../services/API';
 // STYLESHEET
-import "./addMemorial.css"
+import "./addMemorial.css";
 
 // COMPONENTS
+import freabaseAuth from '../../config/freabaseAuth';
 import PageHeader from '../../components/headers/PageHeader';
 import SubmitButton from '../../components/buttons/SubmitButton';
+import AuthContext from '../../config/firebaseContext';
 
 const AddMemorial = () => {
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  // const [birthplace, setBirthplace] = useState('');
-  // const [birthState, setBirthState] = useState('');
-  // const [birthMonth, setBirthMonth] = useState('');
-  // const [birthDay, setBirthDay] = useState('');
-  // const [birthYear, setBirthYear] = useState('');
+  const [user] = useContext(AuthContext);
+  console.log(user)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,14 +25,19 @@ const AddMemorial = () => {
     deathMonth: '',
     deathDay: '',
     deathYear: '',
-  })
+  });
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    API.addMemorial(formData);
     console.log(formData);
   };
 
-  //
+  const handleSubmit = (e) => {
+    e.preventDefaut();
+
+    console.log(formData);
+  }
 
   return (
     <>
@@ -43,17 +45,17 @@ const AddMemorial = () => {
       <form action="#" className="memorial-form">
         <div className="form-group">
           <label for="first-name">First Name: </label>
-          <input id="first-name" type="text" placeholder="George" required onChange={handleInputChange} name='firstName'></input>
+          <input id="first-name" type="text" placeholder="First Name" required onChange={handleInputChange} name='firstName'></input>
         </div>
 
         <div className="form-group">
           <label for="last-name">Last Name: </label>
-          <input id="last-name" type="text" placeholder="Washington" required onChange={handleInputChange} name='lastName'></input>
+          <input id="last-name" type="text" placeholder="Last Name" required onChange={handleInputChange} name='lastName'></input>
         </div>
 
         <div className="form-group">
           <label for="birthplace">Birthplace:</label>
-          <input id="birthplace" type="text" placeholder="Popes Creek" required onChange={handleInputChange} name='birthPlace'></input>
+          <input id="birthplace" type="text" placeholder="Birthplace" required onChange={handleInputChange} name='birthPlace'></input>
           <label for="birthstate">State:</label>
           <select id="birthstate" onChange={handleInputChange} name='birthState'>
             <option value="AL">Alabama</option>
@@ -517,10 +519,11 @@ const AddMemorial = () => {
           <input type="file" class="form-control-file" id="photo" />
         </div>
 
-        <SubmitButton label="Submit" />
+        <SubmitButton label="Submit" onClick={handleSubmit} />
       </form >
     </>
   )
+
 }
 
 export default AddMemorial;

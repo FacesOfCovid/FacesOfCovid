@@ -15,12 +15,12 @@ module.exports = {
                         .then(dbModel => res.json(dbModel))
                         .catch(err => res.status(422).json(err));
         },
-        // create: function (req, res) {
-        //         db.Memorial
-        //                 .create(req.body)
-        //                 .then(dbModel => res.json(dbModel))
-        //                 .catch(err => res.status(422).json(err));
-        // },
+        create: function (req, res) {
+                db.Memorial
+                        .create(req.body)
+                        .then(dbModel => res.json(dbModel))
+                        .catch(err => res.status(422).json(err));
+        },
         // update: function (req, res) {
         //         db.Memorial
         //                 .findOneAndUpdate({ _id: req.params.id }, req.body)
